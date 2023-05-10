@@ -1,0 +1,127 @@
+body {
+	font-family: 'Roboto Condensed', 'Segoe UI', 'Helvetica', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+	'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: #414455;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+select,
+a{
+	cursor: pointer;
+	color: #FFFFFF;
+}
+
+.bg-light {
+	background-color: rgba(255, 255, 255, 1) !important;
+}
+
+.bg-success {
+	background-color: rgba(115, 229, 153) !important;
+}
+
+.bg-primary {
+	background-color: rgb(65, 68, 85) !important;
+}
+
+
+.btn-primary {
+	background-color: rgb(65, 68, 85, 1) !important;
+	border-color: rgb(65, 68, 85, 1) !important;
+}
+
+
+.text-primary {
+	color: rgb(65, 68, 85, 1) !important;
+}
+
+.bg-custom {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.shadow_element {
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.shadow_custom {
+	box-shadow: 0 6px 3px rgba(0, 0, 0, 0.1);
+}
+
+/*Header style start*/
+
+.header{
+	position: relative;
+}
+
+.header-1{
+	padding-left: 10px;
+}
+
+.header-2{
+	right: 10px;
+	position: absolute;
+	float: right;
+	color:rgb(65, 68, 85);
+}
+/*Header style end*/
+
+/*Intro style start*/
+.intro{
+	min-height: 100vh;
+    background: url(../src/icons/intro-bg.jpg) no-repeat;
+    background-size: 100% 100%;
+	padding-top: 100px;
+	margin-left: 100px;
+}
+
+.intro-title{
+    font-size: 50px;
+    text-align: center;
+    width: 800px;
+    height: 185px;
+    color: #FFFFFF;
+}
+
+.map-button{
+	background-color: #414455;
+	color: white;
+	font-size: 20px;
+	padding: 10px 50px;
+	border: 3px solid #E99B53;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-left: 280px;
+}
+
+.map-button-link
+{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 48px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+.map-button:hover, .map-button:focus, .map-button:active{
+    background: #E99B53;
+}
+/*Intro style end*/
+
+/*Map style start*/
+
+[class*="copyrights-pane"] {
+    display: none !important;
+}
+
+/*Map style end*/
+
+svg[aria-hidden="true"],
+svg[style*="overflow: hidden;"]{
+	display: none;
+}
+

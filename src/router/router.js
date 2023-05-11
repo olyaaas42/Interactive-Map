@@ -15,7 +15,7 @@ export const router = createBrowserRouter([
 		}}/>
 	},
 	{
-		path: '/mainWindow',
+		path: '/',
 		element: <MainWindow/>,
 	},
 	{
@@ -24,7 +24,7 @@ export const router = createBrowserRouter([
 		errorElement: <ErrorPage/>
 	},
 	{
-		path: '/',
+		path: '/registration',
 		element: <Registration/>,
 	},
 	{

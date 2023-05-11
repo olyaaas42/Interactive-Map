@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container } from 'reactstrap';
+import { Container,Row } from 'reactstrap';
 import Wrapper from '../second-components/wrapper/Wrapper';
 import { useForm } from 'react-hook-form';
 import {
@@ -105,10 +105,14 @@ export default function Registration() {
 														register={register('passwordRepeated',
 															{ required: passwordRepeatedErrorMessage })}/>
 					</div>
-					<button type="submit"
+					<Row className="d-flex justify-content-center mt-5">
+					<div className="d-flex flex-column w-75">
+						<Link to="/UserCabinet"
 									className="btn text-primary border border-2 fs-5 p-3">
-						{'Зарегистрироваться'.toUpperCase()}
-					</button>
+							{'Зарегистрироваться'.toUpperCase()}
+						</Link>
+					</div>
+					</Row>
 				</form>
 			</Container>
 		</Wrapper>

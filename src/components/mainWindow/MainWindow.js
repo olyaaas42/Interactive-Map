@@ -12,7 +12,12 @@ export default function MainWindow() {
 		<Navbar.Toggle aria-controls='responsive-navbar-nav'/>
 			<Navbar.Collapse id='responsive-navbar-nav'>
 				<div className='header-2'>
-					<Button variant="primary" >Авторизация</Button> </div>
+					<Link to="/Authorization">
+						<button type="submit" >
+							Авторизация
+						</button>
+					</Link> 
+				</div>
 			</Navbar.Collapse>
 		</Navbar>
 		</div>

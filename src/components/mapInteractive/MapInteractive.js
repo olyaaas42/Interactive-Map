@@ -4,6 +4,7 @@ import {
 } from '@pbe/react-yandex-maps';
 import { Navbar, Button } from 'react-bootstrap';
 import $ from 'jquery';
+import { Link } from 'react-router-dom';
 
 export default function MapInteractive(){
 
@@ -17,7 +18,13 @@ export default function MapInteractive(){
 		<div className='header-1'><Navbar.Brand>Interactiva Map Graduates</Navbar.Brand></div>
 		<Navbar.Toggle aria-controls='responsive-navbar-nav'/>
 			<Navbar.Collapse id='responsive-navbar-nav'>
-				<div className='header-2'><Button variant="primary">На главную</Button> </div>
+				<div className='header-2'>
+                        <Link to="/">
+							<button type="submit" >
+							    На главную
+							</button>
+						</Link> 
+                </div>
 			</Navbar.Collapse>
 		</Navbar>
 	</div>
@@ -29,14 +36,14 @@ export default function MapInteractive(){
 
                     <FullscreenControl />
                     <TypeSelector options={{ float: "right" }} />
-                    <ZoomControl options={{ float: "left" }} />
+                    <ZoomControl options={{ float: "right" }} />
 
-                    <ListBox data={{ content: "Специальность" }} id={'0'}>
-                        <ListBoxItem data={{ content: "Информатика и вычислительная техника", }} id={'1'}/>
-                        <ListBoxItem data={{content: "Системный анализ и управление",}} id={'2'}/>
-                        <ListBoxItem data={{content: "Автоматизация технологических процессов и производств",}} id={'3'}/>
-                        <ListBoxItem data={{content: "Управление в технических системах",}} id={'4'}/>
-                        <ListBoxItem data={{content: "Программная инженерия"}} id={'5'}/>
+                    <ListBox data={{ content: "Специальность" }} >
+                        <ListBoxItem data={{ content: "Информатика и вычислительная техника", }} />
+                        <ListBoxItem data={{content: "Системный анализ и управление",}} />
+                        <ListBoxItem data={{content: "Автоматизация технологических процессов и производств",}}/>
+                        <ListBoxItem data={{content: "Управление в технических системах",}} />
+                        <ListBoxItem data={{content: "Программная инженерия"}} />
                     </ListBox>
 
 

@@ -30,6 +30,14 @@ export default function UserCabinet({header: {title, isFluid}}) {
 					<div className="d-flex flex-column w-75">
 						<Link to="/"
 									className="btn bg-transparent border border-2">
+							На главную
+						</Link>
+					</div>
+				</Row>
+				<Row className="d-flex justify-content-center mt-5">
+					<div className="d-flex flex-column w-75">
+						<Link to="/"
+									className="btn bg-transparent border border-2">
 							Выход
 						</Link>
 					</div>

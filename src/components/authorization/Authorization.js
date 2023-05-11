@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import Wrapper from '../second-components/wrapper/Wrapper';
-import { Container } from 'reactstrap';
+import { Container, Row } from 'reactstrap';
 import TestingApi from '../../services/testingApi.js';
 import {
 	InputWithLabel
@@ -46,7 +46,7 @@ export default function Authorization() {
 	return (
 		<Wrapper>
 			<Container className="shadow_element bg-light rounded-3">
-				<Link to="/MainWindow" className="text-primary p-2 position-fixed">
+				<Link to="/" className="text-primary p-2 position-fixed">
 					<SvgIcons id="arrow-left" color="primary" size="20"/>
 					Вернуться
 				</Link>
@@ -70,15 +70,20 @@ export default function Authorization() {
 						</Link>
 					</div>
 					<div className="d-flex flex-column justify-content-between">
-						<button type="submit"
-										className="btn text-primary border border-2 fs-5 p-3">
+					<Row className="d-flex justify-content-center mt-5">
+					<div className="d-flex flex-column w-75">
+						<Link to="/UserCabinet"
+									className="btn text-primary border border-2 fs-5 p-3">
 							{'Войти'.toUpperCase()}
-						</button>
-						<p className="mb-5">-----------------------------------------Или----------------------------------------</p>
-						<button type="submit"
-										className="btn text-primary border border-2 fs-5 p-3">
+						</Link>
+					</div>
+					<div className="d-flex flex-column w-75">
+						<Link to="/Registration"
+									className="btn text-primary border border-2 fs-5 p-3">
 							{'Зарегистрироваться'.toUpperCase()}
-						</button>
+						</Link>
+					</div>
+					</Row>
 					</div>
 						
 				</form>

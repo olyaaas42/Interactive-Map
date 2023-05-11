@@ -8,6 +8,7 @@ import {
 	InputWithLabel
 } from '../second-components/form-autorization-inputs/InputWithLabel.js';
 import styles from './authorization.module.css';
+import SvgIcons from '../second-components/svg-icons/SvgIcons';
 
 const { horizontal_line } = styles;
 
@@ -45,6 +46,10 @@ export default function Authorization() {
 	return (
 		<Wrapper>
 			<Container className="shadow_element bg-light rounded-3">
+				<Link to="/MainWindow" className="text-primary p-2 position-fixed">
+					<SvgIcons id="arrow-left" color="primary" size="20"/>
+					Вернуться
+				</Link>
 				<form onSubmit={handleSubmit(authorization)}
 							style={{ maxWidth: '550px', minHeight: '100vh' }}
 							className="d-flex flex-column justify-content-evenly mx-auto text-primary">

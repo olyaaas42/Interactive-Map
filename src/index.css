@@ -71,7 +71,7 @@ a{
 
 /*Intro style start*/
 .intro{
-	min-height: 100vh;
+	min-height: 94vh;
     background: url(../src/icons/intro-bg.jpg) no-repeat;
     background-size: 100% 100%;
 	padding-top: 100px;

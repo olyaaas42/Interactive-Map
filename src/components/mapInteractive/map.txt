@@ -83,3 +83,30 @@
         objectManager.add(data);
     });
 }
+
+
+                    <ListBox data={{ content: "Специальность" }} >
+                        <ListBoxItem data={{ content: "Информатика и вычислительная техника" }} state={{ selected: true}}/>
+                        <ListBoxItem data={{content: "Системный анализ и управление",}}/>
+                        <ListBoxItem data={{content: "Автоматизация технологических процессов и производств",}}/>
+                        <ListBoxItem data={{content: "Управление в технических системах",}}/>
+                        <ListBoxItem data={{content: "Программная инженерия"}}/>
+                    </ListBox>
+
+
+                    <ObjectManager state={{clusterize: true, gridSize: 64, clusterIconLayout: "default#pieChart"}} 
+                    objects={{
+                        openBalloonOnClick: true,
+                        preset: "islands#bluetIcon",
+                      }}
+                      clusters={{
+                        preset: "islands#blueClusterIcons",
+                      }}
+                      
+                      filter={(object) => object.id % 2 === 0}
+                    >
+                      </ObjectManager>
+
+                                            <Placemark geometry={[56.50668919629225,85.02550235742181] } options={{preset: "islands#darkOrangeIcon"}} />
+                      <Placemark geometry={[56.45539545108418,84.9753772353515] } options={{preset: "islands#pinkIcon"}} />
+                      <Placemark geometry={[56.468320434533354,84.94516483300775] } options={{preset: "islands#brownIcon"}} />

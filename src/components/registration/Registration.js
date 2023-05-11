@@ -12,6 +12,13 @@ export default function Registration() {
 	const { register, handleSubmit, formState: { errors }, setError } = useForm({
 		defaultValues: {
 			email: '',
+			lastName: '',
+			firstName: '',
+			surname: '',
+			specialiry: '',
+			year: '',
+			adress: '',
+			work: '',
 			password: '',
 			passwordRepeated: '',
 		}
@@ -25,13 +32,20 @@ export default function Registration() {
 	};
 
 	const emailErrorMessage = 'Пожалуйста, введите почту';
+	const lastNameErrorMessage = 'Пожалуйста, введите фамилию';
+	const firstNameErrorMessage = 'Пожалуйста, введите имя';
+	const surnameErrorMessage = 'Пожалуйста, введите отчество';
+	const specialityErrorMessage = 'Пожалуйста, введите специальность';
+	const yearErrorMessage ='Пожалуйста, введите год выпуска';
+	const adressErrorMessage = 'Пожалуйста, введите город проживания';
+	const workErrorMessage ='Пожалуйста, введите место работы';
 	const passwordErrorMessage = 'Пожалуйста, введите пароль';
 	const passwordRepeatedErrorMessage = 'Пожалуйста, введите пароль';
 
 	return (
 		<Wrapper>
 			<Container className="shadow_element bg-light rounded-3">
-				<Link to="/" className="text-primary p-2 position-fixed">
+				<Link to="/Authorization" className="text-primary p-2 position-fixed">
 					<SvgIcons id="arrow-left" color="primary" size="20"/>
 					Вернуться
 				</Link>
@@ -45,6 +59,41 @@ export default function Registration() {
 														title="Электронная почта"
 														register={register('email',
 															{ required: emailErrorMessage })}/>
+						<InputWithLabel errors={errors}
+														type="lastName"
+														title="Фамилия"
+														register={register('lastName',
+															{ required: lastNameErrorMessage })}/>									
+						<InputWithLabel errors={errors}
+														type="firstName"
+														title="Имя"
+														register={register('firstName',
+															{ required: firstNameErrorMessage })}/>
+						<InputWithLabel errors={errors}
+														type="surname"
+														title="Отчество"
+														register={register('surname',
+															{ required: surnameErrorMessage })}/>
+						<InputWithLabel errors={errors}
+														type="speciality"
+														title="Специальность"
+														register={register('speciality',
+															{ required: specialityErrorMessage })}/>
+						<InputWithLabel errors={errors}
+														type="year"
+														title="Год выпуска"
+														register={register('year',
+															{ required: yearErrorMessage })}/>
+						<InputWithLabel errors={errors}
+														type="adress"
+														title="Город проживания"
+														register={register('adress',
+															{ required: adressErrorMessage })}/>
+						<InputWithLabel errors={errors}
+														type="work"
+														title="Работа"
+														register={register('work',
+															{ required: workErrorMessage })}/>
 						<InputWithLabel errors={errors}
 														type="password"
 														title="Введите пароль"

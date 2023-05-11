@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Button } from 'react-bootstrap';
-import MapInteractive from '../mapInteractive/MapInteractive';
-import Authorization from '../authorization/Authorization';
+import { Link } from 'react-router-dom';
+
 
 export default function MainWindow() {
 	return(
@@ -11,7 +11,8 @@ export default function MainWindow() {
 		<div className='header-1'><Navbar.Brand>Interactiva Map Graduates</Navbar.Brand></div>
 		<Navbar.Toggle aria-controls='responsive-navbar-nav'/>
 			<Navbar.Collapse id='responsive-navbar-nav'>
-				<div className='header-2'><Button variant="primary" onClick={Authorization}>Авторизация</Button> </div>
+				<div className='header-2'>
+					<Button variant="primary" >Авторизация</Button> </div>
 			</Navbar.Collapse>
 		</Navbar>
 		</div>
@@ -19,7 +20,9 @@ export default function MainWindow() {
 			<h1 class="intro-title">
 				Интерактивная карта выпускников 
 			</h1>
-			<button className="map-button" onClick={MapInteractive}>Открыть карту</button>
+			<Link to="/MapInteractive">
+				<button className="map-button">Открыть карту</button>
+			</Link>
 		</div>
 	</>
 )}

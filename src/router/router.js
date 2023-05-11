@@ -24,11 +24,11 @@ export const router = createBrowserRouter([
 		errorElement: <ErrorPage/>
 	},
 	{
-		path: '/registration',
+		path: '/',
 		element: <Registration/>,
 	},
 	{
-		path: '/',
+		path: '/mapInteractive',
 		element: <MapInteractive/>,
 	},
 ]);
